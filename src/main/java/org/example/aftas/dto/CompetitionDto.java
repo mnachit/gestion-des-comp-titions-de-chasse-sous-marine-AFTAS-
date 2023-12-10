@@ -12,8 +12,8 @@ import java.time.LocalTime;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class CompetitionDto {
     @NotNull(message = "code cannot be null")
