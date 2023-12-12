@@ -1,6 +1,5 @@
 package org.example.aftas.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,10 +17,8 @@ public class Ranking {
     private int score;
 
     @ManyToOne
-    @JsonBackReference
     private Competition competition;
 
     @ManyToOne
-    @JsonBackReference
     private Member member;
 }

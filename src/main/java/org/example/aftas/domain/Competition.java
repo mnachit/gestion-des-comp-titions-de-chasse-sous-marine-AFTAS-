@@ -6,6 +6,7 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -19,7 +20,7 @@ public class Competition {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String code;
-    private LocalDateTime date;
+    private Date date;
     private LocalTime startTime;
     private LocalTime endTime;
     private Integer numberOfParticipants;

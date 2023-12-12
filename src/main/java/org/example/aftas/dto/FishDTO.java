@@ -1,32 +1,25 @@
 package org.example.aftas.dto;
 
-import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import java.util.List;
-
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Getter
+@Setter
 public class FishDTO {
-    @NotBlank
+    @NotBlank(message = "name cannot be blank")
     @Size(min = 3, max = 20)
     private String name;
 
-    @NotNull
-    @Size(min = 3, max = 20)
+    @NotNull(message = "average weight cannot be null")
     private Double averageWeight;
 
-    @Valid
-    private List<HuntingDto> huntingList;
-
-    @NotNull
-    private LevelDTO level;
+    @NotNull(message = "level cannot be null")
+    @Min(value = 1, message = "level must be greater than 0")
+    private Long level;
 }

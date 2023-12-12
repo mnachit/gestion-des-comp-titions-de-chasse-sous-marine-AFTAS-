@@ -33,10 +33,4 @@ public class MemberDTO {
 
     @NotBlank(message = "identityNumber cannot be blank")
     private String identityNumber;
-
-    @Valid
-    private List<RankingDto> rankings;
-
-    @Valid
-    private List<HuntingDto> huntingList;
 }

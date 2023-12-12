@@ -24,7 +24,6 @@ public class Member {
     private String nationality;
     private String identityNumber;
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
-    @JsonManagedReference
     private List<Ranking> rankings;
     @OneToMany(mappedBy = "member")
     private List<Hunting> huntingList;
