@@ -13,9 +13,11 @@ import lombok.NoArgsConstructor;
 @Builder
 public class RankingDto {
     @NotNull(message = "rank cannot be null")
-    @NotBlank(message = "rank cannot be blank")
     private int rank;
     @NotNull(message = "score cannot be null")
-    @NotBlank(message = "score cannot be blank")
     private int score;
+    @NotNull(message = "member cannot be null")
+    private Long member;
+    @NotNull(message = "competition cannot be null")
+    private Long competition;
 }

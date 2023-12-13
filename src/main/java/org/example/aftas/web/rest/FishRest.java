@@ -2,10 +2,8 @@ package org.example.aftas.web.rest;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.example.aftas.domain.Fish;
 import org.example.aftas.dto.FishDTO;
-import org.example.aftas.dto.response.FishReponse;
-import org.example.aftas.mapper.FishMapper;
+import org.example.aftas.dto.response.FishResponse;
 import org.example.aftas.service.FishService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -37,7 +35,7 @@ public class FishRest {
     }
 
     @GetMapping
-    public ResponseEntity<List<FishReponse>> getAllFish1() {
+    public ResponseEntity<List<FishResponse>> getAllFish1() {
         try {
             return new ResponseEntity<>(fishService.getAllFish1(),HttpStatus.CREATED);
         } catch (Exception e) {

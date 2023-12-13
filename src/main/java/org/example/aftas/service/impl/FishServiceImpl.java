@@ -2,9 +2,8 @@ package org.example.aftas.service.impl;
 
 import lombok.NoArgsConstructor;
 import org.example.aftas.domain.Fish;
-import org.example.aftas.dto.EntityToFishReponse;
 import org.example.aftas.dto.FishDTO;
-import org.example.aftas.dto.response.FishReponse;
+import org.example.aftas.dto.response.FishResponse;
 import org.example.aftas.handler.exception.ValidationException;
 import org.example.aftas.mapper.EntityToFishResponse;
 import org.example.aftas.mapper.FishMapper;
@@ -50,11 +49,11 @@ public class FishServiceImpl implements FishService {
     }
 
     @Override
-    public List<FishReponse> getAllFish1() {
+    public List<FishResponse> getAllFish1() {
         List<Fish> fish = fishRepository.findAll();
-        List<FishReponse> fishDTOS = new ArrayList<>();
+        List<FishResponse> fishDTOS = new ArrayList<>();
         for (Fish fish1 : fish) {
-            FishReponse FDto = EntityToFishResponse.ToFishResponse(fish1);
+            FishResponse FDto = EntityToFishResponse.ToFishResponse(fish1);
             fishDTOS.add(FDto);
         }
         return fishDTOS;

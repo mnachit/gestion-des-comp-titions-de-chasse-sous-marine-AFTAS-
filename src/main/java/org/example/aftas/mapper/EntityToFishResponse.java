@@ -2,12 +2,12 @@ package org.example.aftas.mapper;
 
 import org.example.aftas.domain.Fish;
 import org.example.aftas.domain.Level;
-import org.example.aftas.dto.response.FishReponse;
+import org.example.aftas.dto.response.FishResponse;
 import org.example.aftas.dto.response.LevelResponse;
 
 public class EntityToFishResponse {
-    public static FishReponse ToFishResponse(Fish fishDTO) {
-        FishReponse fishResponse = new FishReponse();
+    public static FishResponse ToFishResponse(Fish fishDTO) {
+        FishResponse fishResponse = new FishResponse();
         fishResponse.setName(fishDTO.getName());
         fishResponse.setAverageWeight(fishDTO.getAverageWeight());
 

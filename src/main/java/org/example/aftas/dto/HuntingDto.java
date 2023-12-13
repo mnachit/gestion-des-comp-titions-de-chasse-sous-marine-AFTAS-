@@ -12,15 +12,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class HuntingDto {
-    @NotNull
+    @NotNull(message = "Number of fish is required")
     private int numberOfFish;
 
-    @NotNull
-    private CompetitionDto competition;
+    @NotNull(message = "Competition is required")
+    private Long competition;
 
-    @NotNull
-    private MemberDTO member;
+    @NotNull(message = "Member is required")
+    private Long member;
 
-    @NotNull
-    private FishDTO fish;
+    @NotNull(message = "Fish is required")
+    private Long fish;
+
+    @NotNull(message = "Average weight is required")
+    private Double averageWeight;
 }
